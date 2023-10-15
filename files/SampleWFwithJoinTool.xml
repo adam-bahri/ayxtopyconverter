@@ -1,0 +1,288 @@
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">dummy_filepath</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dummy_filepath.xlsx Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Employee ID" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Staff_ID" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="GUID" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Work Email" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Worker" size="255" source="dummy_filepath.xlsx" type="V_WString" />
+            <Field name="First Name" size="255" source="dummy_filepath.xlsx" type="V_WString" />
+            <Field name="Last Name" size="255" source="dummy_filepath.xlsx" type="V_WString" />
+            <Field name="Hire Date" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Current Status" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Management Level" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Supervisory Organization" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Line of Service" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="BU" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Cost Center - ID" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Cost Center - Name" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Employee Type" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Time type" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="FTE" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Organizational Key" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Company - Name" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Contract End Date (Employee)" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Termination Date" source="dummy_filepath.xlsx" type="Date" />
+            <Field name="Last Day Of Work" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Assignment Start Date" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Assignment End Date" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="First Day of Leave" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Last Day of Leave" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Back from leave" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Return Processed?" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Worker's Team Leader" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="Is Team Leader" size="255" source="dummy_filepath.xlsx" type="V_String" />
+            <Field name="TimeStamp" source="dummy_filepath.xlsx" type="Date" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">dummy_filepath2</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dummy_filepath2.xlsx
+Query=`Hires$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Worker" size="255" source="dummy_filepath2.xlsx" type="V_WString" />
+            <Field name="Employee ID" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Candidate ID" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Hire Reason" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Earliest Hire Date" source="dummy_filepath2.xlsx" type="Date" />
+            <Field name="Hire Date" source="dummy_filepath2.xlsx" type="Date" />
+            <Field name="Email - Primary Work" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="FTE" source="dummy_filepath2.xlsx" type="Double" />
+            <Field name="Worker Type" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Employee Type" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Employee Type - Primary Position" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="258" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Employee ID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Employee ID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_Employee ID" selected="False" rename="Right_Employee ID" input="Right_" />
+                <SelectField field="Right_Staff_ID" selected="False" input="Right_" />
+                <SelectField field="Right_GUID" selected="False" input="Right_" />
+                <SelectField field="Right_Work Email" selected="False" input="Right_" />
+                <SelectField field="Right_Worker" selected="False" rename="Right_Worker" input="Right_" />
+                <SelectField field="Right_First Name" selected="False" input="Right_" />
+                <SelectField field="Right_Last Name" selected="False" input="Right_" />
+                <SelectField field="Right_Hire Date" selected="False" rename="Right_Hire Date" input="Right_" />
+                <SelectField field="Right_Current Status" selected="False" input="Right_" />
+                <SelectField field="Right_Management Level" selected="False" input="Right_" />
+                <SelectField field="Right_Supervisory Organization" selected="False" input="Right_" />
+                <SelectField field="Right_Line of Service" selected="False" input="Right_" />
+                <SelectField field="Right_BU" selected="False" input="Right_" />
+                <SelectField field="Right_Cost Center - ID" selected="False" input="Right_" />
+                <SelectField field="Right_Cost Center - Name" selected="False" input="Right_" />
+                <SelectField field="Right_Employee Type" selected="False" rename="Right_Employee Type" input="Right_" />
+                <SelectField field="Right_Time type" selected="False" input="Right_" />
+                <SelectField field="Right_FTE" selected="False" rename="Right_FTE" input="Right_" />
+                <SelectField field="Right_Organizational Key" selected="False" input="Right_" />
+                <SelectField field="Right_Company - Name" selected="False" input="Right_" />
+                <SelectField field="Right_Contract End Date (Employee)" selected="False" input="Right_" />
+                <SelectField field="Right_Termination Date" selected="False" input="Right_" />
+                <SelectField field="Right_Last Day Of Work" selected="False" input="Right_" />
+                <SelectField field="Right_Assignment Start Date" selected="False" input="Right_" />
+                <SelectField field="Right_Assignment End Date" selected="False" input="Right_" />
+                <SelectField field="Right_First Day of Leave" selected="False" input="Right_" />
+                <SelectField field="Right_Last Day of Leave" selected="False" input="Right_" />
+                <SelectField field="Right_Back from leave" selected="False" input="Right_" />
+                <SelectField field="Right_Return Processed?" selected="False" input="Right_" />
+                <SelectField field="Right_Worker's Team Leader" selected="False" input="Right_" />
+                <SelectField field="Right_Is Team Leader" selected="False" input="Right_" />
+                <SelectField field="Right_TimeStamp" selected="False" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Worker" size="255" source="dummy_filepath2.xlsx" type="V_WString" />
+            <Field name="Employee ID" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Candidate ID" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Hire Reason" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Earliest Hire Date" source="dummy_filepath2.xlsx" type="Date" />
+            <Field name="Hire Date" source="dummy_filepath2.xlsx" type="Date" />
+            <Field name="Email - Primary Work" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="FTE" source="dummy_filepath2.xlsx" type="Double" />
+            <Field name="Worker Type" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Employee Type" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Employee Type - Primary Position" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Employee ID" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Worker" size="255" source="dummy_filepath2.xlsx" type="V_WString" />
+            <Field name="Employee ID" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Candidate ID" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Hire Reason" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Earliest Hire Date" source="dummy_filepath2.xlsx" type="Date" />
+            <Field name="Hire Date" source="dummy_filepath2.xlsx" type="Date" />
+            <Field name="Email - Primary Work" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="FTE" source="dummy_filepath2.xlsx" type="Double" />
+            <Field name="Worker Type" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Employee Type" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+            <Field name="Employee Type - Primary Position" size="255" source="dummy_filepath2.xlsx" type="V_String" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="Employee ID" order="" />
+          </SortInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Employee ID" size="255" source="dummy_filepath.xlsx" type="V_String" />
+          </RecordInfo>
+          <SortInfo noProgress="True">
+            <Field field="Employee ID" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="342" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">dummy_filepath3</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <PreserveFormat>False</PreserveFormat>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dummy_filepath.xlsx Query=Sheet2</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Join" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name />
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
