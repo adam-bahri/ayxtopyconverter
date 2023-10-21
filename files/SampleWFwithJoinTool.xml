@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <AlteryxDocument yxmdVer="2020.4">
   <Nodes>
     <Node ToolID="1">
@@ -117,8 +118,8 @@ Query=`Hires$`</DefaultAnnotationText>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
-                <SelectField field="Right_Employee ID" selected="False" rename="Right_Employee ID" input="Right_" />
-                <SelectField field="Right_Staff_ID" selected="False" input="Right_" />
+                <SelectField field="temp_change_Right_Employee ID" selected="True" rename="Right_Employee ID" input="Right_" />
+                <SelectField field="temp_change_Right_Staff_ID" selected="True" rename="Right_Staff_ID" input="Right_" />
                 <SelectField field="Right_GUID" selected="False" input="Right_" />
                 <SelectField field="Right_Work Email" selected="False" input="Right_" />
                 <SelectField field="Right_Worker" selected="False" rename="Right_Worker" input="Right_" />
