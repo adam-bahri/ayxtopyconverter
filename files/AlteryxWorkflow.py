@@ -196,6 +196,14 @@ class Node:
         #Parse fields and tables if query
         self.tables.append(s)
 
+class Connection:
+    def __init__(self, connection):
+        self.origin_tool_id = connection["Origin"]["@ToolID"]
+        self.origin_tool_connection_name = connection["Origin"]["@Connection"]
+        self.destination_tool_id = connection["Destination"]["@ToolID"]
+        self.destination_tool_connection_name = connection["Destination"]["@Connection"]
+
+    
 class Workflow:
     def __init__(self, path):
         self.path = path
@@ -203,54 +211,6 @@ class Workflow:
         self.nodes = dict(self.doc["AlteryxDocument"]["Nodes"])
         self.connections = dict(self.doc["AlteryxDocument"]["Connections"])
         self.properties = dict(self.doc["AlteryxDocument"]["Properties"])
-        # self.objects = pd.DataFrame([n.__dict__ for n in self.nodes])
-        # # self.objects = self.objects[['nodeId','nodeType',
-        #                              'fields','tables',
-        #                              'isDisabled','formulas',
-        #                              'configuration','annotations',
-        #                              'metaInfo','positionX',
-        #                              'positionY','width',
-        #                              'height','max_X',
-        #                              'max_Y','isChild','text']]
-
-        #     # Process nodes
-        # self.processed_nodes = []
-        # for node_data in self.nodes:
-        #     node = Node(node_data)
-        #     self.processed_nodes.append(node)
-
-    def output_nodes_to_json(self, output_file):
-        nodes_data = []
-        for node in self.processed_nodes:
-            # Convert each node object to a dictionary before adding to the list
-            nodes_data.append(vars(node))
-        
-        # Output the list of node dictionaries to a JSON file
-        with open(output_file, 'w') as json_file:
-            json.dump(nodes_data, json_file, indent=4)
-    
-    # # Method to parse nodes and store attributes in a DataFrame
-    # def parse_nodes(self):
-    #     nodes_data = self.nodes['Node']
-    #     nodes_list = []
-    #     for node_data in nodes_data:
-    #         node = Node(node_data)
-    #         nodes_list.append({
-    #             "Node ID": node.nodeId,
-    #             "Node Type": node.nodeType,
-    #             "Position X": node.positionX,
-    #             "Position Y": node.positionY,
-    #             "Annotations": node.annotations,
-    #             "Configuration": node.configuration,
-    #             "Meta Info": node.metaInfo,
-    #             "Fields": node.fields,
-    #             "Formulas": node.formulas,
-    #             "Is Disabled": node.isDisabled
-    #         })
-        
-    #     # Create a DataFrame from the list of node attributes
-    #     nodes_df = pd.DataFrame(nodes_list)
-    #     return nodes_df
 
     # Method to parse nodes and store attributes in a DataFrame
     def parse_nodes(self):
@@ -292,7 +252,24 @@ class Workflow:
         nodes_df = pd.DataFrame(nodes_list, columns=columns)
 
         return nodes_df
+    
+    def parse_connections(self):
+        connections_data = self.connections["Connection"]
+        connections_list = []
 
+        for connection in connections_data:
+            con = Connection(connection)
+
+            connections_list.append({
+                "OriginToolID" : con.origin_tool_id,
+                "OriginToolConnectionName" : con.origin_tool_connection_name,
+                "DestinationToolID" : con.destination_tool_id,
+                "DestinationToolConnectionName" : con.destination_tool_connection_name
+            })
+        
+        connections_df = pd.DataFrame(connections_list)
+
+        return connections_df
 # # Example usage
 # TestWorkflow = Workflow("SampleWFwithJoinTool.xml")
 
