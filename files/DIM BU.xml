@@ -1,0 +1,1293 @@
+<AlteryxDocument yxmdVer="2020.4">
+  <Nodes>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="54" width="1790" height="396" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>DIM BU</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="968" y="259" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Name" selected="True" />
+                <SelectField field="Inactive Organization" selected="True" />
+                <SelectField field="Supervisory Organization" selected="True" />
+                <SelectField field="TimeStamp" selected="True" />
+                <SelectField field="Line of Service" selected="True" />
+                <SelectField field="CF Superior Default Organizations" selected="True" />
+                <SelectField field="Allowed Organizations from Organization Assignments" selected="True" />
+                <SelectField field="Default Organization Assignments2" selected="True" />
+                <SelectField field="Reference ID" selected="True" />
+                <SelectField field="FileName" selected="True" />
+                <SelectField field="Supervisory Organization - Allowed Organizations" selected="True" />
+                <SelectField field="Superior Organization Effective Moment" selected="True" />
+                <SelectField field="Allowed Cost Center" selected="True" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1088" y="175" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>!Contains([Supervisory Organization], "pwc legal")</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!Contains([Supervisory Organization], "pwc legal")</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+            <Position x="1160" y="115" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>Name</Field>
+              <ErrorHandling>Last</ErrorHandling>
+              <RootName>BU</RootName>
+              <Delimeters value="-" />
+              <NumFields value="4" />
+              <Flags value="0" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="BU1" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="BU2" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="BU3" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="BU4" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1268" y="115" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="BU1" selected="True" rename="Territory" />
+                <SelectField field="BU2" selected="True" rename="Line of Service2" />
+                <SelectField field="BU3" selected="True" rename="Business Unit" />
+                <SelectField field="BU4" selected="True" rename="Sub Business Unit" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Territory" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Line of Service2" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Business Unit" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Sub Business Unit" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1088" y="319" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[Inactive Organization] = "No"</Expression>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Inactive Organization</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2021-09-27 13:58:34</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>No</Operand>
+                  <StartDate>2021-09-27 13:58:34</StartDate>
+                  <EndDate>2021-09-27 13:58:34</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Inactive Organization] = "No"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="872" y="259" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Global Network" selected="False" />
+                <SelectField field="Go To Market" selected="False" />
+                <SelectField field="Industry" selected="False" />
+                <SelectField field="Programme" selected="False" />
+                <SelectField field="Sector" selected="False" />
+                <SelectField field="Supervisory Organization" selected="True" />
+                <SelectField field="TimeStamp" selected="True" />
+                <SelectField field="Country/Territory" selected="False" />
+                <SelectField field="Line of Service" selected="True" />
+                <SelectField field="Date Created" selected="False" />
+                <SelectField field="Availability Date" selected="False" />
+                <SelectField field="Name" selected="True" />
+                <SelectField field="Code" selected="False" />
+                <SelectField field="Reference ID" selected="True" />
+                <SelectField field="Workday ID" selected="False" />
+                <SelectField field="Inactive Organization" selected="True" />
+                <SelectField field="Primary Location" selected="False" />
+                <SelectField field="Inherited From Superior" selected="False" />
+                <SelectField field="Supervisory Manager" selected="False" />
+                <SelectField field="Manager Employee ID" selected="False" />
+                <SelectField field="Manager Staff Code" selected="False" />
+                <SelectField field="Manager Work Email" selected="False" />
+                <SelectField field="Manager Location" selected="False" />
+                <SelectField field="Manager Management Level" selected="False" />
+                <SelectField field="Manager Company Hierarchy" selected="False" />
+                <SelectField field="Manager Position ID" selected="False" />
+                <SelectField field="Organization Level from Top" selected="False" />
+                <SelectField field="Superior Organization" selected="False" />
+                <SelectField field="Superior Org Reference ID" selected="False" />
+                <SelectField field="Superior Organization ID" selected="False" />
+                <SelectField field="Subordinate Organizations" selected="False" />
+                <SelectField field="Staffing Model" selected="False" />
+                <SelectField field="Worker Count" selected="False" />
+                <SelectField field="Manager Country" selected="False" />
+                <SelectField field="Organization Country" selected="False" />
+                <SelectField field="Organization Country (ISO Code)" selected="False" />
+                <SelectField field="Hiring Restrictions for Job Managed Supervisory Organizations" selected="False" />
+                <SelectField field="Default Organization Assignments" selected="False" />
+                <SelectField field="Allowed Organization Assignments" selected="False" />
+                <SelectField field="Effective Job Requisitions" selected="False" />
+                <SelectField field="Superior Organization - Level 01 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 01 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 01 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 01 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 02 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 02 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 02 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 02 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 03 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 03 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 03 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 03 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 04 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 04 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 04 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 04 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 05 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 05 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 05 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 05 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 06 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 06 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 06 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 06 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 07 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 07 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 07 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 07 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 08 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 08 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 08 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 08 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 09 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 09 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 09 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 09 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 10 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 10 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 10 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 10 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 11 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 11 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 11 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 11 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 12 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 12 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 12 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 12 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 13 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 13 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 13 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 13 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 14 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 14 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 14 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 14 Manager ID" selected="False" />
+                <SelectField field="Superior Organization - Level 15 From Top" selected="False" />
+                <SelectField field="Supervisory Organization Level 15 Reference ID" selected="False" />
+                <SelectField field="Supervisory Organization Level 15 Manager" selected="False" />
+                <SelectField field="Supervisory Organization Level 15 Manager ID" selected="False" />
+                <SelectField field="Global Competency Network" selected="False" />
+                <SelectField field="Company" selected="False" />
+                <SelectField field="Cost Center" selected="False" />
+                <SelectField field="Compensation Pool Manager" selected="False" />
+                <SelectField field="CF Superior Default Organizations" selected="True" />
+                <SelectField field="Allowed Organizations from Organization Assignments" selected="True" />
+                <SelectField field="Default Organization Assignments2" selected="True" />
+                <SelectField field="FileName" selected="True" />
+                <SelectField field="Supervisory Organization - Allowed Organizations" selected="True" />
+                <SelectField field="Superior Organization Effective Moment" selected="True" />
+                <SelectField field="Allowed Cost Center" selected="True" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings>
+            <Position x="1532" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">False</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">"Business Unit"</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">True</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">True</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output26">
+              <RecordInfo>
+                <Field name="Name" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="TimeStamp" source="TextInput: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Date" />
+                <Field name="Line of Service" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Reference ID" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="FileName" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Territory" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Line of Service2" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Business Unit" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Sub Business Unit" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1640" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF Contains(Name, &quot;FS-Data&quot;)&#xA;THEN &quot;FS Data&quot;&#xA;ELSEIF Contains(Name, &quot;I&amp;PS&quot;) OR Contains([Name], &quot;I&amp;S&quot;)&#xA;THEN &quot;IPS&quot;&#xA;ELSEIF Contains([Business Unit], &quot;Academy&quot;)&#xA;THEN &quot;PWC Academy&quot;&#xA;ELSEIF Contains([Business Unit], &quot;Techno&quot;)&#xA;THEN &quot;Techno&quot;&#xA;ELSE [Business Unit]&#xA;ENDIF" field="Business Unit" size="255" type="V_WString" />
+                <FormulaField expression="IF Contains([Line of Service], &quot;compass&quot;)&#xA;THEN &quot;Assurance&quot;&#xA;ELSE [Line of Service]&#xA;ENDIF" field="Line of Service" size="255" type="V_String" />
+                <FormulaField expression="IF LEFT([Sub Business Unit], 2) IN (&quot;PE&quot;, &quot;RE&quot;) AND [Business Unit]=&quot;ALT&quot;&#xA;THEN [Business Unit]+ &quot; &quot;+LEFT([Sub Business Unit], 2)&#xA;ELSE [Business Unit]&#xA;ENDIF&#xA;// special request from JB Mahieux" field="Business Unit" size="255" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Business Unit = IF Contains(Name, "FS-Data")
+THEN "FS Data"
+ELSEIF Contains(Name...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="TimeStamp" source="TextInput: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Date" />
+                <Field name="Line of Service" size="255" source="Formula: IF Contains([Line of Service], &quot;compass&quot;)&#xA;THEN &quot;Assurance&quot;&#xA;ELSE [Line of Service]&#xA;ENDIF" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Reference ID" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="FileName" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Territory" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Line of Service2" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Business Unit" size="255" source="Formula: IF LEFT([Sub Business Unit], 2) IN (&quot;PE&quot;, &quot;RE&quot;) AND [Business Unit]=&quot;ALT&quot;&#xA;THEN [Business Unit]+ &quot; &quot;+LEFT([Sub Business Unit], 2)&#xA;ELSE [Business Unit]&#xA;ENDIF&#xA;// special request from JB Mahieux" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Sub Business Unit" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1760" y="103" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="CF Superior Default Organizations" selected="False" />
+                <SelectField field="Allowed Organizations from Organization Assignments" selected="False" />
+                <SelectField field="Default Organization Assignments2" selected="False" />
+                <SelectField field="Line of Service2" selected="False" />
+                <SelectField field="Business Unit" selected="True" rename="BU" />
+                <SelectField field="Sub Business Unit" selected="True" rename="Sub BU" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Name" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="TimeStamp" source="TextInput: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Date" />
+                <Field name="Line of Service" size="255" source="Formula: IF Contains([Line of Service], &quot;compass&quot;)&#xA;THEN &quot;Assurance&quot;&#xA;ELSE [Line of Service]&#xA;ENDIF" type="V_String" />
+                <Field name="Reference ID" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="FileName" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Territory" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="BU" size="255" source="Formula: IF LEFT([Sub Business Unit], 2) IN (&quot;PE&quot;, &quot;RE&quot;) AND [Business Unit]=&quot;ALT&quot;&#xA;THEN [Business Unit]+ &quot; &quot;+LEFT([Sub Business Unit], 2)&#xA;ELSE [Business Unit]&#xA;ENDIF&#xA;// special request from JB Mahieux" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Sub BU" size="255" source="Formula: [_CurrentField_]" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+            <Position x="79" y="150" width="685" height="193" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Caption>Extract, filter and aggregate R292 reports by Max Date</Caption>
+              <Style TextColor="#004000" FillColor="#ecf2f2" BorderColor="#008000" Transparency="25" Margin="25" />
+              <Disabled value="False" />
+              <Folded value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <ChildNodes>
+            <Node ToolID="10">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+                <Position x="104" y="259" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Directory>\\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292</Directory>
+                  <FileSpec>R292 *.xlsx</FileSpec>
+                  <IncludeSubDirs value="False" />
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText />
+                  <DefaultAnnotationText>dir \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 *.xlsx</DefaultAnnotationText>
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="FullPath" size="32767" source="Directory:" type="V_WString" />
+                    <Field name="Directory" size="32767" source="Directory:" type="V_WString" />
+                    <Field name="FileName" size="260" source="Directory:" type="V_WString" />
+                    <Field name="ShortFileName" size="14" source="Directory:" type="V_WString" />
+                    <Field name="CreationTime" source="Directory:" type="DateTime" />
+                    <Field name="LastAccessTime" source="Directory:" type="DateTime" />
+                    <Field name="LastWriteTime" source="Directory:" type="DateTime" />
+                    <Field name="Size" source="Directory:" type="Int64" />
+                    <Field name="AttributeArchive" source="Directory:" type="Bool" />
+                    <Field name="AttributeCompressed" source="Directory:" type="Bool" />
+                    <Field name="AttributeEncrypted" source="Directory:" type="Bool" />
+                    <Field name="AttributeHidden" source="Directory:" type="Bool" />
+                    <Field name="AttributeNormal" source="Directory:" type="Bool" />
+                    <Field name="AttributeOffline" source="Directory:" type="Bool" />
+                    <Field name="AttributeReadonly" source="Directory:" type="Bool" />
+                    <Field name="AttributeReparsePoint" source="Directory:" type="Bool" />
+                    <Field name="AttributeSparseFile" source="Directory:" type="Bool" />
+                    <Field name="AttributeSystem" source="Directory:" type="Bool" />
+                    <Field name="AttributeTemporary" source="Directory:" type="Bool" />
+                  </RecordInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+            </Node>
+            <Node ToolID="11">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+                <Position x="296" y="199" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <NumRows value="1" />
+                  <Fields>
+                    <Field name="Reports_Back   " />
+                  </Fields>
+                  <Data>
+                    <r>
+                      <c>1</c>
+                    </r>
+                  </Data>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="Reports_Back   " source="TextInput:" type="Byte" />
+                  </RecordInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+            </Node>
+            <Node ToolID="12">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="680" y="247" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="Global Network" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Go To Market" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Industry" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Programme" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Sector" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="TimeStamp" source="TextInput:" type="Date" />
+                    <Field name="Country/Territory" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                    <Field name="Date Created" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Availability Date" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Code" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Workday ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Primary Location" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Inherited From Superior" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Default Organization Assignments" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Employee ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Staff Code" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Work Email" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Location" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Management Level" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Company Hierarchy" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Position ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Organization Level from Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Org Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Subordinate Organizations" size="3982" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_WString" />
+                    <Field name="Staffing Model" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Worker Count" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Country" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Organization Country" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Organization Country (ISO Code)" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Hiring Restrictions for Job Managed Supervisory Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Allowed Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Effective Job Requisitions" size="4263" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_WString" />
+                    <Field name="Superior Organization - Level 01 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 01 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 01 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 01 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 02 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 02 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 02 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 02 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 03 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 03 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 03 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 03 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 04 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 04 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 04 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 04 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 05 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 05 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 05 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 05 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 06 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 06 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 06 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 06 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 07 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 07 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 07 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 07 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 08 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 08 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 08 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 08 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 09 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 09 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 09 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 09 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 10 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 10 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 10 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 10 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 11 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 11 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 11 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 11 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 12 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 12 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 12 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 12 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 13 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 13 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 13 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 13 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 14 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 14 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 14 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 14 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 15 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 15 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 15 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 15 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Global Competency Network" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Company" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Cost Center" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Compensation Pool Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                  </RecordInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="13">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+                <Position x="248" y="259" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Field>FileName</Field>
+                  <RegExExpression value=".*(\d{4}[-]{1}\d{2}[-]{1}\d{2}).*" />
+                  <CaseInsensitve value="True" />
+                  <Method>ParseComplex</Method>
+                  <Replace expression="$1">
+                    <CopyUnmatched value="True" />
+                  </Replace>
+                  <ParseSimple>
+                    <SplitToRows value="False" />
+                    <RootName>
+                    </RootName>
+                    <NumFields value="3" />
+                    <ErrorHandling>Warn</ErrorHandling>
+                  </ParseSimple>
+                  <ParseComplex>
+                    <Field field="TimeStamp" type="V_String" size="254" />
+                  </ParseComplex>
+                  <Match>
+                    <Field>FullPath_Matched</Field>
+                    <ErrorUnmatched value="False" />
+                  </Match>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <AnnotationText />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="FullPath" size="32767" source="Directory:" type="V_WString" />
+                    <Field name="Directory" size="32767" source="Directory:" type="V_WString" />
+                    <Field name="FileName" size="260" source="Directory:" type="V_WString" />
+                    <Field name="ShortFileName" size="14" source="Directory:" type="V_WString" />
+                    <Field name="CreationTime" source="Directory:" type="DateTime" />
+                    <Field name="LastAccessTime" source="Directory:" type="DateTime" />
+                    <Field name="LastWriteTime" source="Directory:" type="DateTime" />
+                    <Field name="Size" source="Directory:" type="Int64" />
+                    <Field name="AttributeArchive" source="Directory:" type="Bool" />
+                    <Field name="AttributeCompressed" source="Directory:" type="Bool" />
+                    <Field name="AttributeEncrypted" source="Directory:" type="Bool" />
+                    <Field name="AttributeHidden" source="Directory:" type="Bool" />
+                    <Field name="AttributeNormal" source="Directory:" type="Bool" />
+                    <Field name="AttributeOffline" source="Directory:" type="Bool" />
+                    <Field name="AttributeReadonly" source="Directory:" type="Bool" />
+                    <Field name="AttributeReparsePoint" source="Directory:" type="Bool" />
+                    <Field name="AttributeSparseFile" source="Directory:" type="Bool" />
+                    <Field name="AttributeSystem" source="Directory:" type="Bool" />
+                    <Field name="AttributeTemporary" source="Directory:" type="Bool" />
+                    <Field description="RegEx: Parsed from FileName" name="TimeStamp" size="254" source="RegEx: Parsed from FileName" type="V_String" />
+                  </RecordInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+            </Node>
+            <Node ToolID="14">
+              <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+                <Position x="344" y="259" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="TimeStamp" selected="True" type="Date" size="10" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output">
+                  <RecordInfo>
+                    <Field name="FullPath" size="32767" source="Directory:" type="V_WString" />
+                    <Field name="Directory" size="32767" source="Directory:" type="V_WString" />
+                    <Field name="FileName" size="260" source="Directory:" type="V_WString" />
+                    <Field name="ShortFileName" size="14" source="Directory:" type="V_WString" />
+                    <Field name="CreationTime" source="Directory:" type="DateTime" />
+                    <Field name="LastAccessTime" source="Directory:" type="DateTime" />
+                    <Field name="LastWriteTime" source="Directory:" type="DateTime" />
+                    <Field name="Size" source="Directory:" type="Int64" />
+                    <Field name="AttributeArchive" source="Directory:" type="Bool" />
+                    <Field name="AttributeCompressed" source="Directory:" type="Bool" />
+                    <Field name="AttributeEncrypted" source="Directory:" type="Bool" />
+                    <Field name="AttributeHidden" source="Directory:" type="Bool" />
+                    <Field name="AttributeNormal" source="Directory:" type="Bool" />
+                    <Field name="AttributeOffline" source="Directory:" type="Bool" />
+                    <Field name="AttributeReadonly" source="Directory:" type="Bool" />
+                    <Field name="AttributeReparsePoint" source="Directory:" type="Bool" />
+                    <Field name="AttributeSparseFile" source="Directory:" type="Bool" />
+                    <Field name="AttributeSystem" source="Directory:" type="Bool" />
+                    <Field name="AttributeTemporary" source="Directory:" type="Bool" />
+                    <Field description="RegEx: Parsed from FileName" name="TimeStamp" source="RegEx: Parsed from FileName" type="Date" />
+                  </RecordInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+            </Node>
+            <Node ToolID="15">
+              <GuiSettings>
+                <Position x="548" y="247" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Value name="ControlParams"><![CDATA[Control Parameter (2)=FullPath
+Control Parameter (8)=timestamp
+]]></Value>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output14">
+                  <RecordInfo>
+                    <Field name="Global Network" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Go To Market" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Industry" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Programme" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Sector" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="TimeStamp" source="TextInput:" type="Date" />
+                    <Field name="Country/Territory" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                    <Field name="Date Created" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Availability Date" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Code" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Workday ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Primary Location" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Inherited From Superior" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Default Organization Assignments" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Employee ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Staff Code" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Work Email" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Location" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Management Level" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Company Hierarchy" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Position ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Organization Level from Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Org Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Subordinate Organizations" size="3982" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_WString" />
+                    <Field name="Staffing Model" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Worker Count" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Manager Country" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Organization Country" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Organization Country (ISO Code)" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Hiring Restrictions for Job Managed Supervisory Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Allowed Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Effective Job Requisitions" size="4263" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_WString" />
+                    <Field name="Superior Organization - Level 01 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 01 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 01 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 01 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 02 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 02 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 02 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 02 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 03 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 03 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 03 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 03 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 04 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 04 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 04 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 04 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 05 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 05 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 05 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 05 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 06 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 06 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 06 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 06 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 07 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 07 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 07 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 07 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 08 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 08 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 08 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 08 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 09 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 09 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 09 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 09 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 10 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 10 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 10 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 10 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 11 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 11 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 11 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 11 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 12 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 12 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 12 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 12 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 13 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 13 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 13 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 13 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 14 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 14 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 14 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 14 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Superior Organization - Level 15 From Top" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 15 Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 15 Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Supervisory Organization Level 15 Manager ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Global Competency Network" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Company" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Cost Center" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                    <Field name="Compensation Pool Manager" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                  </RecordInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings Macro=".\Macros\Load WD R075.yxmc" />
+            </Node>
+            <Node ToolID="16">
+              <GuiSettings>
+                <Position x="452" y="247" />
+              </GuiSettings>
+              <Properties>
+                <Configuration>
+                  <Value name="BatchMacroGroupBy" />
+                  <Value name="Input.Input10"><![CDATA[FullPath=FullPath
+Directory=Directory
+FileName=FileName
+CreationTime=CreationTime
+LastAccessTime=LastAccessTime
+LastWriteTime=LastWriteTime
+Size=Size
+AttributeArchive=AttributeArchive
+AttributeCompressed=AttributeCompressed
+AttributeEncrypted=AttributeEncrypted
+AttributeHidden=AttributeHidden
+AttributeNormal=AttributeNormal
+AttributeOffline=AttributeOffline
+AttributeReadonly=AttributeReadonly
+AttributeReparsePoint=AttributeReparsePoint
+AttributeSparseFile=AttributeSparseFile
+AttributeSystem=AttributeSystem
+AttributeTemporary=AttributeTemporary
+timestamp=TimeStamp
+]]></Value>
+                  <Value name="ControlParams"><![CDATA[Control Parameter (2)=Reports_Back   
+]]></Value>
+                </Configuration>
+                <Annotation DisplayMode="0">
+                  <Name />
+                  <DefaultAnnotationText />
+                  <Left value="False" />
+                </Annotation>
+                <MetaInfo connection="Output4">
+                  <RecordInfo>
+                    <Field name="FullPath" size="32767" source="Directory: (BatchMacro)" type="V_WString" />
+                    <Field name="Directory" size="32767" source="Directory: (BatchMacro)" type="V_WString" />
+                    <Field name="FileName" size="260" source="Directory: (BatchMacro)" type="V_WString" />
+                    <Field name="ShortFileName" size="14" source="Directory: (BatchMacro)" type="V_WString" />
+                    <Field name="CreationTime" source="Directory: (BatchMacro)" type="DateTime" />
+                    <Field name="LastAccessTime" source="Directory: (BatchMacro)" type="DateTime" />
+                    <Field name="LastWriteTime" source="Directory: (BatchMacro)" type="DateTime" />
+                    <Field name="Size" source="Directory: (BatchMacro)" type="Int64" />
+                    <Field name="AttributeArchive" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeCompressed" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeEncrypted" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeHidden" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeNormal" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeOffline" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeReadonly" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeReparsePoint" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeSparseFile" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeSystem" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field name="AttributeTemporary" source="Directory: (BatchMacro)" type="Bool" />
+                    <Field description="RegEx: Parsed from FileName" name="timestamp" source="RegEx: Parsed from FileName (BatchMacro)" type="Date" />
+                  </RecordInfo>
+                </MetaInfo>
+              </Properties>
+              <EngineSettings Macro=".\Macros\Last N occurences based on timestamp.yxmc" />
+            </Node>
+          </ChildNodes>
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="968" y="343" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\ABAHRI~1\AppData\Local\Temp\Engine_9736_2984d89a3af647fc9594816c192298d4_\Engine_3104_c36462207a394f7cbce07ebfa31eed4c_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1376" y="115" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Inactive Organization</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2023-04-24 09:09:42</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>No</Operand>
+                  <StartDate>2023-04-24 09:09:42</StartDate>
+                  <EndDate>2023-04-24 09:09:42</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Inactive Organization] = "No"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Territory" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Line of Service2" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Business Unit" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Sub Business Unit" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Name" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Inactive Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Supervisory Organization" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="TimeStamp" source="TextInput:" type="Date" />
+                <Field name="Line of Service" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="CF Superior Default Organizations" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Organizations from Organization Assignments" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Default Organization Assignments2" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Reference ID" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+                <Field name="Supervisory Organization - Allowed Organizations" size="558" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Superior Organization Effective Moment" size="255" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="Allowed Cost Center" size="310" source="File: \\LUFPR005\Assurance$\WORKING_GROUP\HR Dashboard\data\Alteryx Input\WD reports\R292\R292 Supervisory Organizations by Country_Territory 2023-10-03 23_10 CEST.xlsx|||`Sheet1$`" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Territory" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Line of Service2" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Business Unit" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+                <Field description="TextToColumns: Parsed from Name" name="Sub Business Unit" size="255" source="TextToColumns: Parsed from Name" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="True" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output26" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="16" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="16" Connection="Input10" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output14" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output4" />
+      <Destination ToolID="15" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="True" />
+      <Destination ToolID="7" Connection="Input2" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>DIM BU</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

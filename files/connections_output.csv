@@ -1,0 +1,18 @@
+OriginToolID,OriginTool,OriginToolConnectionName,DestinationToolID,DestinationTool,DestinationToolConnectionName
+1,AlteryxSelect,Output,2,Filter,Input
+1,AlteryxSelect,Output,5,Filter,Input
+2,Filter,True,3,TextToColumns,Input
+3,TextToColumns,Output,4,AlteryxSelect,Input
+4,AlteryxSelect,Output,19,Filter,Input
+6,AlteryxSelect,Output,1,AlteryxSelect,Input
+6,AlteryxSelect,Output,18,BrowseV2,Input
+7,Data Cleansing,Output26,8,Formula,Input
+8,Formula,Output,9,AlteryxSelect,Input
+10,Directory,Output,13,RegEx,Input
+11,TextInput,Output,16,,Control
+14,AlteryxSelect,Output,16,,Input10
+12,AlteryxSelect,Output,6,AlteryxSelect,Input
+13,RegEx,Output,14,AlteryxSelect,Input
+15,,Output14,12,AlteryxSelect,Input
+16,,Output4,15,,Control
+19,Filter,True,7,Data Cleansing,Input2
