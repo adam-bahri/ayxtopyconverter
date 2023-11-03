@@ -104,7 +104,7 @@ print("=" * 50)
 
 ### The ultimate goals is to identify subflows in the workflow: a subflow is represented by a set of connected nodes ( or tools )
 ### for which the transformations can be chained on the same DataFrame.
-### Ex: Input Data > Formula > Data Cleansing > Select is an example of subflows.
+### Ex: Input Data > Formula > Data Cleansing > Select is an example of subflow.
 
 in_degrees = dict(G.in_degree())
 
